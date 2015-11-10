@@ -1,0 +1,16 @@
+mysql:
+  image: mysql:5.6
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=admin
+app:
+  build: m2docker
+  ports:
+    - "80:80"
+  links:
+    - mysql
+  environment: 
+    - MYSQL_USER=root
+    - MYSQL_PASSWORD=admin
+    - PUBLIC_HOST=docker.localhost.com
