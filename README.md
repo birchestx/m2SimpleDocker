@@ -2,7 +2,7 @@
 
 This is a local Magento 2 docker build. Nothing fancy, does what it says on the tin.
 
-I've not pushed it anyway, use at your own risk.
+I've not pushed it anywhere yet, use at your own risk.
  
 ## Kudos and Respect
 
@@ -32,13 +32,13 @@ If you want to change the release number then do so in `m2docker/files/scripts/i
 
 # Useful Docker commands
 
-`docker ps
+  docker ps
 
-docker images
+  docker images
 
-docker exec -it <image_id> bash
+  docker exec -it <image_id> bash
 
-docker stop`
+  docker stop
 
 
 # Notes
