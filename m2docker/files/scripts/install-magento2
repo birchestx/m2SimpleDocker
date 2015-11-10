@@ -7,7 +7,6 @@ cd /var/www/magento2
 rm -rf htdocs
 
 curl -sS https://getcomposer.org/installer | php
-#php composer.phar install
 php composer.phar create-project magento/project-community-edition htdocs 2.0.0-rc --prefer-dist
 
 # Swap to developer mode for better error diagnostics

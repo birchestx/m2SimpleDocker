@@ -30,7 +30,6 @@ ADD files/config/my.cnf /etc/mysql/my.cnf
 
 # Install Magento 2
 RUN mkdir /var/www/magento2
-#ADD files/config/composer.json /var/www/magento2/composer.json
 ADD files/scripts/install-magento2 /var/www/install-magento2
 RUN bash -x /var/www/install-magento2
 
