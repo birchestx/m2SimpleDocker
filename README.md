@@ -48,3 +48,12 @@ There is no sample data, I'm not a fan.
 It's simple.
 
 Not intended in anyway for Production use.
+
+
+#TODOs
+
+Maybe some compilation on frontend to speed it up
+
+Mount the volumes so we can use as a local development environment
+
+
