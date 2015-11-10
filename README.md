@@ -21,6 +21,13 @@ Mark's was just a bit away from where I am. I wanted to keep it simple, not use 
 
 If you want to change the release number then do so in `m2docker/files/scripts/install-magento2`, its currently at `2.0.0rc1` and will be updated on next major tag
 
+# Pre-Requisites
+
+1. Install Docker (I'm on OSX)
+2. Install Docker Compose
+3. Open Docker via Applications->Docker->Terminal
+4. Add docker ip address alias to /etc/hosts e.g. 192.168.99.100 docker.localhost.com
+
 # Execution
 
 1. git clone this
