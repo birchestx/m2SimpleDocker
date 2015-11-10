@@ -18,15 +18,19 @@ cd /var/www/magento2/htdocs
 bin/magento setup:install \
 	        --db-host=mysql \
 		--db-name=magento \
-		--db_user="$MYSQL_USER" \
-		--db_pass="$MYSQL_PASSWORD" \
-		--backend_frontname=admin \
-		--base_url=http://$PUBLIC_HOST/ \
-		--admin_lastname=Smith \
-		--admin_firstname=John \
-		--admin_email=john.smith@example.com \
-		--admin_username=admin \
-		--admin_password=magento2 \
+		--db-user="$MYSQL_USER" \
+		--db-password="$MYSQL_PASSWORD" \
+		--backend-frontname=admin \
+		--base-url=http://$PUBLIC_HOST/ \
+		--admin-lastname=Smith \
+		--admin-firstname=John \
+		--admin-email=john.smith@example.com \
+		--admin-user=admin \
+		--admin-password=magento2 \
+
+# Check permissions again
+find . -type d -exec chmod 770 {} \; && find . -type f -exec chmod 660 {} \; && chmod u+x bin/magento
+chown www-data:www-data -R /var/www/magento2
 
 
 # In production mode we pre-compute various files

@@ -1,5 +1,7 @@
 FROM ubuntu:trusty
-MAINTAINER Alan Kent
+MAINTAINER Karen Baker 
+
+RUN echo "Heavily copied from Alan Kent - https://github.com/alankent/docker-magento2-demo-apache"
 
 # Get Apache, mysql client, PHP etc (subset of a full LAMP stack - no MySQL server)
 RUN apt-get update && apt-get install -y apache2 mysql-client php5 php5-curl php5-mcrypt php5-gd php5-mysql php5-intl curl git php5-xsl
@@ -36,7 +38,7 @@ RUN bash -x /var/www/install-magento2
 EXPOSE 80
 
 # Start up the Apache server
-ADD files/scripts/runserver /usr/local/bin/runserver
-RUN chmod +x /usr/local/bin/runserver
+ADD files/scripts/runserver.sh /usr/local/bin/runserver.sh
+RUN chmod +x /usr/local/bin/runserver.sh
 ENTRYPOINT ["bash", "-c"]
-CMD ["/usr/local/bin/runserver"]
+CMD ["/usr/local/bin/runserver.sh"]
